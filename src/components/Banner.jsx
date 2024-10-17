@@ -15,7 +15,7 @@ const Banner = () => {
       </div>
 
       {/* Banner Content */}
-      <div className="relative flex flex-col items-center justify-center w-full h-full text-white -mt-4 md:flex hidden">
+      <div className="relative  flex-col items-center justify-center w-full h-full text-white -mt-4 md:flex hidden">
         <h1 className="md:text-4xl font-bold text-center">
           Discover the Art of Handmade Fashion
         </h1>
