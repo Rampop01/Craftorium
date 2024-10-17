@@ -17,7 +17,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div className=" py-16 border border-gray-300 rounded-full  ">
+    <div className=" py-16 border border-gray-300 rounded-full mx-4  ">
       <div className="container mx-auto flex flex-col items-center text-center ">
         <h2 className="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
         <p className="text-gray-600 mb-6">

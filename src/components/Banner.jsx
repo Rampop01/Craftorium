@@ -3,9 +3,9 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-[400px]  overflow-hidden my-16">
+    <div className="relative w-full h-[400px]  overflow-hidden md:my-16">
       {/* Background Image */}
-      <div className="absolute inset-0 mx-20">
+      <div className="absolute inset-0 md:mx-20">
         <img
           src="https://res.cloudinary.com/dxswouxj5/image/upload/v1729163048/banner_1_yaugqi.png" // Replace with your banner image path
           alt="Banner Background"
@@ -15,11 +15,11 @@ const Banner = () => {
       </div>
 
       {/* Banner Content */}
-      <div className="relative flex flex-col items-center justify-center w-full h-full text-white -mt-4">
-        <h1 className="text-4xl font-bold text-center">
+      <div className="relative flex flex-col items-center justify-center w-full h-full text-white -mt-4 md:flex hidden">
+        <h1 className="md:text-4xl font-bold text-center">
           Discover the Art of Handmade Fashion
         </h1>
-        <p className="mt-2 text-lg text-center max-w-xl">
+        <p className="mt-2 md:text-lg text-center max-w-xl">
           Experience unique styles and quality craftsmanship with every piece.
         </p>
         <a
