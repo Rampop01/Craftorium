@@ -7,11 +7,11 @@ const Banner = () => {
       {/* Background Image */}
       <div className="absolute inset-0 md:mx-20">
         <img
-          src="https://res.cloudinary.com/dxswouxj5/image/upload/v1729163048/banner_1_yaugqi.png" // Replace with your banner image path
+          src="https://res.cloudinary.com/dxswouxj5/image/upload/v1729163048/banner_1_yaugqi.png"
           alt="Banner Background"
           className="object-contain w-full h-full"
         />
-        <div className="absolute inset-0 bg-black opacity-40"></div>{" "}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
       {/* Banner Content */}

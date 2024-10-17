@@ -9,19 +9,19 @@ const HeroSection = () => {
       id: 1,
 
       imageUrl:
-        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729154873/herllarn_qih5pm.jpg",
+        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729191929/3a15eb93-205b-4771-807e-9caab3475c72_rsnwye.jpg",
     },
     {
       id: 2,
 
       imageUrl:
-        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729154873/empire_dyrstq.jpg",
+        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729157443/1b4cb35a-8846-438e-a3e7-5250fe6de101_iagpb0.jpg",
     },
     {
       id: 3,
 
       imageUrl:
-        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729166152/b0790802-7087-47bc-bc6c-839977974baf_h2h9gb.jpg",
+        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729157313/48d390d5-e67a-45c2-982f-3e13f32e8b16_d8qn1n.jpg",
     },
   ];
 

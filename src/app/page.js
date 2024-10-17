@@ -7,14 +7,14 @@ import {
   FiShoppingCart,
 } from "react-icons/fi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import HeroSection from "@/components/HeroSection";
-import WelcomeBar from "@/components/WelcomeBar";
-import WhyUs from "@/components/WhyUs";
-import FeaturedProducts from "@/components/FeaturedProducts";
-import Banner from "@/components/Banner";
-import OrderSteps from "@/components/OrderSteps";
+import HeroSection from "@/components/Landingpage/HeroSection";
+import WelcomeBar from "@/components/Landingpage/WelcomeBar";
+import WhyUs from "@/components/Landingpage/WhyUs";
+import FeaturedProducts from "@/components/Landingpage/FeaturedProducts";
+import Banner from "@/components/Landingpage/Banner";
+import OrderSteps from "@/components/Landingpage/OrderSteps";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Nwsletter";
+import Newsletter from "@/components/Landingpage/Nwsletter";
 
 const Home = () => {
   const logo = "Craftorium";

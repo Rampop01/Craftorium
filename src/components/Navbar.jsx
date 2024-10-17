@@ -15,7 +15,7 @@ const Navbar = ({ logo, vendorLogo, generalLinks, showLogo }) => {
   ];
 
   return (
-    <nav className="bg-white shadow-lg p-4 relative z-10">
+    <nav className="bg-black shadow-lg p-4 relative z-10">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -24,17 +24,21 @@ const Navbar = ({ logo, vendorLogo, generalLinks, showLogo }) => {
               {logo}
             </span>
           ) : (
-            <img src={vendorLogo} alt="Vendor Logo" className="h-10" />
+            <img
+              src={vendorLogo}
+              alt="Vendor Logo"
+              className="h-12 w-12 rounded-full md:ml-12 object-cover"
+            />
           )}
         </div>
 
         {/*  Navigation Links for Desktop  */}
-        <div className="hidden md:flex space-x-8 items-center flex-grow justify-center">
+        <div className="hidden md:flex space-x-8 items-center flex-grow justify-center ">
           {generalLinks.map((link, index) => (
             <Link
               href={link.href}
               key={index}
-              className="flex items-center text-gray-700 hover:text-blue-600 font-semibold"
+              className="flex items-center  hover:text-blue-600 font-semibold text-white"
             >
               {link.icon} {link.name}
             </Link>
