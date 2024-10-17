@@ -1,0 +1,99 @@
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+
+const Navbar = ({ logo, vendorLogo, generalLinks, showLogo }) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  //  --------------------Vendor Links -------------------
+  const vendorLinks = [
+    { href: "/herllarn", name: "Herllarn Shoes & Bags" },
+    { href: "/empire", name: "SY Fashion Designer" },
+    { href: "/ria", name: "Ria Accessories" },
+  ];
+
+  return (
+    <nav className="bg-white shadow-lg p-4 relative z-10">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center">
+          {showLogo ? (
+            <span className="text-3xl font-bold ml-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 animate-text">
+              {logo}
+            </span>
+          ) : (
+            <img src={vendorLogo} alt="Vendor Logo" className="h-10" />
+          )}
+        </div>
+
+        {/*  Navigation Links for Desktop  */}
+        <div className="hidden md:flex space-x-8 items-center flex-grow justify-center">
+          {generalLinks.map((link, index) => (
+            <Link
+              href={link.href}
+              key={index}
+              className="flex items-center text-gray-700 hover:text-blue-600 font-semibold"
+            >
+              {link.icon} {link.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* Vendor Dropdown */}
+        <div className="relative md:mr-20 text-center">
+          <button
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 hover:from-purple-400 hover:to-indigo-500 font-bold"
+          >
+            Vendors <span>&#x25BC;</span>
+          </button>
+          {dropdownOpen && (
+            <div
+              className="absolute left-0 mt-2 w-40 bg-white border rounded shadow-md z-50"
+              onClick={() => setDropdownOpen(false)}
+            >
+              {vendorLinks.map((link, index) => (
+                <Link
+                  href={link.href}
+                  key={index}
+                  className="block px-4 py-2 hover:bg-gray-200"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-gray-700 hover:text-blue-600 focus:outline-none"
+          >
+            {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Links */}
+      {mobileMenuOpen && (
+        <div className="md:hidden flex flex-col space-y-4 mt-4">
+          {generalLinks.map((link, index) => (
+            <Link
+              href={link.href}
+              key={index}
+              className="flex items-center text-gray-700 hover:text-blue-600 font-semibold"
+            >
+              {link.icon} {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
