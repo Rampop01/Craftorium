@@ -47,6 +47,7 @@ const WhyUs = () => {
               className="bg-white shadow-md p-6 rounded-lg text-center"
             >
               <div className="mb-4">{feature.icon}</div>
+              <hr />
               <h3 className="text-xl font-semibold mb-2 text-gray-700">
                 {feature.title}
               </h3>

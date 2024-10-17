@@ -33,7 +33,7 @@ const products = [
       "https://res.cloudinary.com/dxswouxj5/image/upload/v1729159167/3beaabf0-acdd-45ae-a3a4-79da70642ba2_kdeqze.jpg",
   },
   {
-    id: 6,
+    id: 7,
     image:
       "https://res.cloudinary.com/dxswouxj5/image/upload/v1729159257/981cf7e2-5221-40ba-8c5b-131a7272af93_pv847v.jpg",
   },

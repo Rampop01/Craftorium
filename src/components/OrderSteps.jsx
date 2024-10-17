@@ -33,7 +33,7 @@ const OrderSteps = () => {
   ];
 
   return (
-    <div className="py-16 bg-gray-100">
+    <div className="py-24 bg-gray-100">
       <h2 className="text-4xl font-bold text-center mb-8">How to Order</h2>
       <div className="flex flex-col md:flex-row justify-center items-center mx-auto max-w-6xl">
         {steps.map((step, index) => (

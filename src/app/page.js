@@ -13,6 +13,8 @@ import WhyUs from "@/components/WhyUs";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import Banner from "@/components/Banner";
 import OrderSteps from "@/components/OrderSteps";
+import Footer from "@/components/Footer";
+import Newsletter from "@/components/Nwsletter";
 
 const Home = () => {
   const logo = "Craftorium";
@@ -48,6 +50,8 @@ const Home = () => {
       <FeaturedProducts />
       <Banner />
       <OrderSteps />
+      <Newsletter />
+      <Footer />
     </div>
   );
 };
