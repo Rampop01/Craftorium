@@ -79,10 +79,11 @@ const HeroSection = () => {
           >
             <Image
               src={slide.imageUrl}
-              alt={slide.text}
+              alt="slider image"
               width={200}
               height={200}
               className="w-full h-full object-contain"
+              priority
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"></div>
           </div>
