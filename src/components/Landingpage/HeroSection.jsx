@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const HeroSection = () => {
@@ -23,6 +24,30 @@ const HeroSection = () => {
       imageUrl:
         "https://res.cloudinary.com/dxswouxj5/image/upload/v1729157313/48d390d5-e67a-45c2-982f-3e13f32e8b16_d8qn1n.jpg",
     },
+    {
+      id: 4,
+
+      imageUrl:
+        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729191950/93088736-d7ee-48b6-950b-dfcd97460054_onxjur.jpg",
+    },
+    {
+      id: 5,
+
+      imageUrl:
+        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729158976/d455cd6a-614a-49ec-b7f7-8de00748e24e_epyeny.jpg",
+    },
+    {
+      id: 6,
+
+      imageUrl:
+        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729157428/49c4aae5-12d7-4bc4-8da5-f94edc696ab1_wrbgvj.jpg",
+    },
+    {
+      id: 7,
+
+      imageUrl:
+        "https://res.cloudinary.com/dxswouxj5/image/upload/v1729188318/b45950b6-3eb1-45e0-9ac5-32163d9e41b5_fppnht.jpg",
+    },
   ];
 
   const handleNext = () => {
@@ -35,14 +60,13 @@ const HeroSection = () => {
     );
   };
 
-  // Auto-slide effect every 5 seconds
   useEffect(() => {
-    const timer = setInterval(handleNext, 5000);
-    return () => clearInterval(timer); // Cleanup on component unmount
+    const timer = setInterval(handleNext, 3000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="relative h-[400px] overflow-hidden">
+    <div className="relative h-[400px] overflow-hidden bg-black">
       {/* Slide container */}
       <div
         className="flex w-full transition-transform duration-500 ease-in-out"
@@ -51,12 +75,14 @@ const HeroSection = () => {
         {slides.map((slide) => (
           <div
             key={slide.id}
-            className="min-w-full h-[400px] flex-shrink-0 flex items-center justify-center relative"
+            className="min-w-full h-[400px]  flex items-center justify-center relative"
           >
-            <img
+            <Image
               src={slide.imageUrl}
               alt={slide.text}
-              className="w-full h-full"
+              width={200}
+              height={200}
+              className="w-full h-full object-contain"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"></div>
           </div>

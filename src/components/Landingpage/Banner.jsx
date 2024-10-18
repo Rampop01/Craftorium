@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 const Banner = () => {
@@ -6,9 +7,11 @@ const Banner = () => {
     <div className="relative w-full h-[400px]  overflow-hidden md:my-16">
       {/* Background Image */}
       <div className="absolute inset-0 md:mx-20">
-        <img
+        <Image
           src="https://res.cloudinary.com/dxswouxj5/image/upload/v1729163048/banner_1_yaugqi.png"
           alt="Banner Background"
+          width={200}
+          height={200}
           className="object-contain w-full h-full"
         />
         <div className="absolute inset-0 bg-black opacity-40"></div>

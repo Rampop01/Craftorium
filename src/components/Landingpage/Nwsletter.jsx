@@ -8,7 +8,6 @@ const Newsletter = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email) {
-      // Here you would typically send the email to your backend service
       setMessage("Thank you for subscribing!");
       setEmail("");
     } else {
@@ -30,12 +29,12 @@ const Newsletter = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="p-3 rounded-l-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="p-3 rounded-l-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
             required
           />
           <button
             type="submit"
-            className="bg-blue-600 text-white p-3 rounded-r-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-gradient-to-r from-pink-400 to-blue-400 text-white p-3 rounded-r-full hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
           >
             Subscribe
           </button>

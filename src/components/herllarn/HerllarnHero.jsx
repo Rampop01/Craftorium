@@ -8,16 +8,22 @@ const HerllarnHero = () => {
         <img
           src="https://res.cloudinary.com/dxswouxj5/image/upload/v1729188318/b45950b6-3eb1-45e0-9ac5-32163d9e41b5_fppnht.jpg"
           alt="Image 1"
+          width={200}
+          height={200}
           className="w-full md:h-full h-40 object-cover "
         />
         <img
           src="https://res.cloudinary.com/dxswouxj5/image/upload/v1729188589/d099de98-5283-4739-8b15-9cea300b78ab_m8slra.jpg"
           alt="Image 2"
+          width={200}
+          height={200}
           className="w-full md:h-full h-40 object-cover "
         />
         <img
           src="https://res.cloudinary.com/dxswouxj5/image/upload/v1729159167/3beaabf0-acdd-45ae-a3a4-79da70642ba2_kdeqze.jpg"
           alt="Image 3"
+          width={200}
+          height={200}
           className="w-full md:h-full h-40 object-cover "
         />
       </div>

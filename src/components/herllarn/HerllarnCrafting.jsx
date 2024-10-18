@@ -13,11 +13,11 @@ const HerllarnCrafting = () => {
             muted
           ></video>
 
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center mx-4">
-            <h2 className="text-white text-4xl font-bold mb-4">
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center ">
+            <h2 className="text-white text-4xl font-bold mb-4 mx-4">
               Crafting Excellence
             </h2>
-            <p className="text-white text-lg text-center max-w-xl">
+            <p className="text-white text-lg text-center max-w-xl mx-4">
               Herllarn handcrafting bag with dedication and precision. Using the
               finest materials, we ensure a perfect blend of style and
               durability in every piece.

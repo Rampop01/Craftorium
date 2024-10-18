@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 const products = [
@@ -61,9 +62,11 @@ const FeaturedProducts = () => {
         {products.map((product) => (
           <div key={product.id + 10} className="flex-shrink-0 w-48">
             <div className="rounded-full overflow-hidden shadow-md border border-gray-200">
-              <img
+              <Image
                 src={product.image}
                 alt={`Product ${product.id}`}
+                width={200}
+                height={200}
                 className="w-full h-full object-cover rounded-full"
               />
             </div>

@@ -75,7 +75,7 @@ const Navbar = ({ logo, vendorLogo, generalLinks, showLogo }) => {
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-gray-700 hover:text-blue-600 focus:outline-none"
+            className="text-white hover:text-blue-600 focus:outline-none"
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -89,7 +89,7 @@ const Navbar = ({ logo, vendorLogo, generalLinks, showLogo }) => {
             <Link
               href={link.href}
               key={index}
-              className="flex items-center text-gray-700 hover:text-blue-600 font-semibold"
+              className="flex items-center text-white hover:text-blue-600 font-semibold"
             >
               {link.icon} {link.name}
             </Link>

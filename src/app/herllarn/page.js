@@ -9,7 +9,9 @@ import Aim from "@/components/herllarn/Aim";
 import MenCollection from "@/components/herllarn/MenCollection";
 import FemaleCollection from "@/components/herllarn/FemaleCollection";
 import Footer from "@/components/Footer";
-import HerllarnCrafting from "@/components/herllarn/herllarnCrafting";
+
+import Image from "next/image";
+import HerllarnCrafting from "@/components/herllarn/HerllarnCrafting";
 
 const HerllarnPage = () => {
   const vendorLogo =
@@ -49,9 +51,11 @@ const HerllarnPage = () => {
       <MenCollection />
       <FemaleCollection />
       <div className="my-10  ">
-        <img
+        <Image
           src="https://res.cloudinary.com/dxswouxj5/image/upload/v1729194857/Red_White_Yellow_Modern_Minimalist_Shoes_New_Arrival_Promotion_Banner_Landscape_1_luvat9.png"
           alt=""
+          width={200}
+          height={200}
           className="md:h-[70vh] w-full object-contain"
         />
       </div>
