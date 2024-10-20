@@ -16,7 +16,7 @@ const SyVideo = () => {
 
   return (
     <div className="my-12">
-      <h1 className="text-4xl text-center ">
+      <h1 className="md:text-4xl text-2xl text-center mx-8">
         From Concept to Creation: Watch Us Work
       </h1>
       <div className="flex flex-col md:flex-row justify-center gap-8 mt-10 mx-20 my-6 h-[50vh]">

@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className=" bg-gray-100 py-16  md:py-24 md:px-32 overflow-hidden flex h-[70vh] gap-8">
+    <div className=" bg-gray-100 py-16  md:py-24 md:px-32 overflow-hidden flex h-[70vh] md:gap-8 gap-2">
       {/* Text Section */}
-      <div className=" max-w-lg mx-auto text-center md:text-left md:max-w-2xl">
-        <h1 className="text-5xl font-bold text-gray-800 leading-tight mb-6">
+      <div className=" max-w-lg mx-auto text-center md:text-left md:max-w-2xl pl-2">
+        <h1 className="md:text-5xl text-3xl font-bold text-gray-800 leading-tight mb-6">
           Elevate Your Look <br />
           <span className="text-[#92714a]">with SY Fashion</span>
         </h1>
@@ -26,7 +26,7 @@ const HeroSection = () => {
           priority
           width={200}
           height={200}
-          className="h-[400px] w-[800px] object-contain"
+          className="md:h-[400px] h-[200px] w-[400px] md:w-[800px] md:object-contain object-cover"
         />
       </div>
     </div>

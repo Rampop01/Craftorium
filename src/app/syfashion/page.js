@@ -68,7 +68,7 @@ const SyfashionPage = () => {
         />
         <div className="bg-black opacity-40 inset-0 absolute z-10"></div>
 
-        <h1 className="absolute inset-0 flex flex-col justify-center items-center text-white mx-4 text-6xl">
+        <h1 className="absolute inset-0 flex flex-col justify-center items-center text-white mx-4 md:text-6xl text-3xl">
           Enjoy 10% discount on every <br /> order make on our website
         </h1>
       </div>
