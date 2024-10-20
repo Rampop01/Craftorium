@@ -10,7 +10,7 @@ const Navbar = ({ logo, vendorLogo, generalLinks, showLogo }) => {
   //  --------------------Vendor Links -------------------
   const vendorLinks = [
     { href: "/herllarn", name: "Herllarn Shoes & Bags" },
-    { href: "/empire", name: "SY Fashion Designer" },
+    { href: "/syfashion", name: "SY Fashion Designer" },
     { href: "/ria", name: "Ria Accessories" },
   ];
 
