@@ -8,7 +8,7 @@ const ProductCard = ({ image, name, description, price }) => {
         <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
         <p className="text-gray-600 text-sm mt-1">{description}</p>
         <div className="flex justify-between items-center mt-4">
-          <span className="text-xl font-bold text-gray-900">${price}</span>
+          <span className="text-xl font-bold text-gray-900">{price}</span>
           <button className="border border-black text-black px-4 py-2 rounded hover:bg-gray-200 transition duration-200">
             Add to Cart
           </button>

@@ -50,7 +50,7 @@ const SyfashionPage = () => {
       />
       <SyfashionHero />
       <div className="bg-[#92714a] overflow-x-hidden ">
-        <div className="animate-scroll text-6xl p-4">
+        <div className="animate-scroll text-6xl p-4 text-white">
           <span>
             ONE-STOP SHOP FOR EVERYTHING STREET WEARS... ONE-STOP SHOP FOR
             EVERYTHING STREET WEARS... ONE-STOP SHOP FOR EVERYTHING STREET WEARS
