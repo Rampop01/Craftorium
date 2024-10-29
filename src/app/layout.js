@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { CartProvider } from "@/components/CartContext";
+import { AuthProvider } from "../components/AuthContext";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -24,7 +26,11 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <CartProvider>{children}</CartProvider>
+          <AuthProvider>
+            {" "}
+            {/* Wrap AuthProvider here */}
+            <CartProvider>{children}</CartProvider>
+          </AuthProvider>
         </body>
       </html>
     </>

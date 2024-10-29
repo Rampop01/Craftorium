@@ -1,4 +1,3 @@
-// CartContext.js
 "use client";
 import React, { createContext, useState, useContext, useEffect } from "react";
 import { allSyCollection } from "../../craftToriumData";
@@ -40,7 +39,7 @@ export const CartProvider = ({ children }) => {
         )
         .map((cartItem) => cartItem.id)
     );
-    console.log(uniqueProductId, "rahmah sweet girl");
+
     return uniqueProductId.size;
   };
   // Add item to cart
@@ -89,7 +88,7 @@ export const CartProvider = ({ children }) => {
   // Calculate total number of items in the cart
   const cartItemCount = () => {
     const result = getProductCount(cartItems, allSyCollection);
-    console.log(result, "iyanu my love--------------");
+
     return result;
   };
 

@@ -5,12 +5,14 @@ import { FiShoppingBag, FiUser } from "react-icons/fi";
 import { useCart } from "../../components/CartContext";
 import { allSyCollection } from "../../../craftToriumData";
 import Link from "next/link";
+import { useAuth } from "../../components/AuthContext";
 
 const CartPage = () => {
   const { cartItems, removeFromCart, addToCart, decreaseFromCart } = useCart();
   const [checkoutMessage, setCheckoutMessage] = useState("");
-
+  const { isAuthenticated } = useAuth(); // Check if the user is authenticated
   const logo = "Craftorium";
+
   const generalLinks = [
     { href: "/", name: "Home", icon: <FiShoppingBag className="mr-2" /> },
     { href: "/account", name: "Account", icon: <FiUser className="mr-2" /> },
@@ -35,7 +37,11 @@ const CartPage = () => {
   );
 
   const handleCheckout = () => {
-    setCheckoutMessage("Redirecting to payment...");
+    if (isAuthenticated) {
+      setCheckoutMessage("Redirecting to payment...");
+    } else {
+      setCheckoutMessage("Please log in to proceed with checkout.");
+    }
   };
 
   return (
@@ -50,7 +56,6 @@ const CartPage = () => {
         ) : (
           <div className="space-y-6">
             {cartItems.map((item) => {
-              // Find the vendor for each item in cartItems
               const productData = allSyCollection.find(
                 (product) => product.id === item.id
               );
@@ -117,14 +122,25 @@ const CartPage = () => {
                   </span>
                 </h3>
               </div>
-              <Link href="/checkout">
-                <button
-                  className="bg-blue-400 text-white px-8 py-3 rounded-md w-full md:w-1/2 font-semibold hover:bg-bluegreen-200"
-                  onClick={handleCheckout}
-                >
-                  Checkout
-                </button>
-              </Link>
+              {isAuthenticated ? (
+                <Link href="/checkout">
+                  <button
+                    className="bg-blue-400 text-white px-8 py-3 rounded-md w-full md:w-1/2 font-semibold hover:bg-bluegreen-200"
+                    onClick={handleCheckout}
+                  >
+                    Checkout
+                  </button>
+                </Link>
+              ) : (
+                <Link href="/authpage">
+                  <button
+                    className="bg-blue-400 text-white px-8 py-3 rounded-md w-full md:w-1/2 font-semibold hover:bg-bluegreen-200"
+                    onClick={handleCheckout}
+                  >
+                    Log in to Checkout
+                  </button>
+                </Link>
+              )}
               {checkoutMessage && (
                 <p className="mt-4 text-center text-lg text-blue-400 font-semibold">
                   {checkoutMessage}
